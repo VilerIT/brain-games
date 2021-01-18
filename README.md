@@ -1,3 +1,7 @@
+### Project demonstration on ASCIInema:
+https://asciinema.org/a/bbqQa8XGDwTs7JEsknEeFsdZ4
+
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/VilerIT/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VilerIT/frontend-project-lvl1/actions)
 
