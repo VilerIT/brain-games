@@ -1,6 +1,8 @@
 ## Project demonstration on ASCIInema:
 
-### [brain-even](https://asciinema.org/a/bbqQa8XGDwTs7JEsknEeFsdZ4)
+### [brain-games](https://asciinema.org/a/xnPXUnyEL5U1H6ywrp929daEO)
+
+### [brain-even](https://asciinema.org/a/IjuI7jPQjQDAvLkjVyvSspLLq)
 
 ### [brain-calc](https://asciinema.org/a/aXgs1L515BjWxHEslX1BLv4Zb)
 
