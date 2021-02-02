@@ -8,7 +8,7 @@ const name = greetAndGetName();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 playGame(() => {
-  const number = randomNumber();
+  const number = randomNumber(1, 100);
   const isEven = (number % 2 === 0);
   const correctAnswer = isEven ? 'yes' : 'no';
 

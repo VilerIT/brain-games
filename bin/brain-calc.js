@@ -10,8 +10,8 @@ const name = greetAndGetName();
 console.log('What is the result of the expression?');
 
 playGame(() => {
-  const number1 = randomNumber();
-  const number2 = randomNumber();
+  const number1 = randomNumber(1, 30);
+  const number2 = randomNumber(1, 30);
   const operator = randomOperator();
 
   const expression = `${number1} ${operator} ${number2}`;
