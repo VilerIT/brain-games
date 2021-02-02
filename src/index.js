@@ -1,25 +1,34 @@
-import readlineSync from 'readline-sync';
+import { checkAnswerAndPrint } from './cli.js';
 
 const attemptsNumber = 3;
+const operators = ['+', '-', '*'];
 
-export const brainEven = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+// eslint-disable-next-line consistent-return
+export const evaluate = (number1, number2, operator) => {
+  switch (operator) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+  }
+};
 
+export const randomNumber = () => Math.floor((Math.random() * 20) + 1);
+
+export const randomOperator = () => operators[Math.floor((Math.random() * operators.length))];
+
+export const playGame = (gameFn, name) => {
   for (let i = 0; i < attemptsNumber; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 20) + 1;
-    const isEven = (randomNumber % 2 === 0);
-    const correctAnswer = isEven ? 'yes' : 'no';
+    const { answer, correctAnswer } = gameFn();
 
-    console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      return false;
+    if (!checkAnswerAndPrint(answer, correctAnswer)) {
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
 
-  return true;
+  console.log(`Congratulations, ${name}!`);
 };

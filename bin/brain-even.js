@@ -1,13 +1,18 @@
 #!/usr/bin/env node
 
-import greet from '../src/cli.js';
-import { brainEven } from '../src/index.js';
+import { greetAndGetName, getAnswer } from '../src/cli.js';
+import { playGame, randomNumber } from '../src/index.js';
 
-const name = greet();
-const isGameSuccessful = brainEven();
+const name = greetAndGetName();
 
-if (isGameSuccessful) {
-  console.log(`Congratulations, ${name}!`);
-} else {
-  console.log(`Let's try again, ${name}!`);
-}
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+playGame(() => {
+  const number = randomNumber();
+  const isEven = (number % 2 === 0);
+  const correctAnswer = isEven ? 'yes' : 'no';
+
+  const answer = getAnswer(`Question: ${number}`);
+
+  return { answer, correctAnswer };
+}, name);
