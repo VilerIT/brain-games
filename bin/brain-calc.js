@@ -7,7 +7,7 @@ import {
 
 const name = greetAndGetName();
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('What is the result of the expression?');
 
 playGame(() => {
   const number1 = randomNumber();
