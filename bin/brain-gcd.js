@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { getAnswer } from '../src/cli.js';
-import { randomNumber, playGame, findGcd } from '../src/index.js';
+import { randomNumber, findGcd } from '../src/index.js';
+import playGame from '../src/game.js';
 
 playGame(() => {
   const number1 = randomNumber(1, 100);
@@ -9,7 +9,7 @@ playGame(() => {
 
   const correctAnswer = findGcd(number1, number2).toString();
 
-  const answer = getAnswer(`Question: ${number1} ${number2}`);
+  const question = `${number1} ${number2}`;
 
-  return { answer, correctAnswer };
+  return { question, correctAnswer };
 }, 'Find the greatest common divisor of given numbers.');

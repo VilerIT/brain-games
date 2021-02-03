@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { getAnswer } from '../src/cli.js';
-import { playGame, generateProgression, randomNumber } from '../src/index.js';
+import { generateProgression, randomNumber } from '../src/index.js';
+import playGame from '../src/game.js';
 
 playGame(() => {
   const progression = generateProgression();
@@ -11,7 +11,7 @@ playGame(() => {
   const correctAnswer = progression[indexOfHidden].toString();
   progression[indexOfHidden] = '..';
 
-  const answer = getAnswer(`Question: ${progression.join(' ')}`);
+  const question = `${progression.join(' ')}`;
 
-  return { answer, correctAnswer };
+  return { question, correctAnswer };
 }, 'What number is missing in the progression?');

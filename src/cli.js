@@ -9,6 +9,6 @@ export const greetAndGetName = () => {
 };
 
 export const getAnswer = (question) => {
-  console.log(question);
+  console.log(`Question: ${question}`);
   return readlineSync.question('Your answer: ');
 };

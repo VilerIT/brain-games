@@ -1,9 +1,3 @@
-import { greetAndGetName } from './cli.js';
-
-const attemptsNumber = 3;
-const operators = ['+', '-', '*'];
-
-// eslint-disable-next-line consistent-return
 export const evaluate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
@@ -13,12 +7,18 @@ export const evaluate = (number1, number2, operator) => {
     case '*':
       return number1 * number2;
     default:
+      return null;
   }
 };
 
 export const randomNumber = (begin, end) => Math.floor((Math.random() * (end - begin + 1)) + begin);
 
-export const randomOperator = () => operators[Math.floor((Math.random() * operators.length))];
+export const randomOperator = () => {
+  const operators = ['+', '-', '*'];
+  const randomIndex = Math.floor(Math.random() * operators.length);
+
+  return operators[randomIndex];
+};
 
 export const findGcd = (num1, num2) => {
   let x = Math.abs(num1);
@@ -49,6 +49,8 @@ export const generateProgression = () => {
   return progression;
 };
 
+export const isEven = (num) => (num % 2 === 0);
+
 export const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -61,23 +63,4 @@ export const isPrime = (num) => {
   }
 
   return true;
-};
-
-export const playGame = (gameFn, gameTask) => {
-  const name = greetAndGetName();
-  console.log(gameTask);
-
-  for (let i = 0; i < attemptsNumber; i += 1) {
-    const { answer, correctAnswer } = gameFn();
-
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-  }
-
-  console.log(`Congratulations, ${name}!`);
 };

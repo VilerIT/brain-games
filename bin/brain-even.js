@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
-import { getAnswer } from '../src/cli.js';
-import { playGame, randomNumber } from '../src/index.js';
+import { randomNumber, isEven } from '../src/index.js';
+import playGame from '../src/game.js';
 
 playGame(() => {
   const number = randomNumber(1, 100);
-  const isEven = (number % 2 === 0);
-  const correctAnswer = isEven ? 'yes' : 'no';
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
 
-  const answer = getAnswer(`Question: ${number}`);
-
-  return { answer, correctAnswer };
+  return { question: number, correctAnswer };
 }, 'Answer "yes" if the number is even, otherwise answer "no".');
