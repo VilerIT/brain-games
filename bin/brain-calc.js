@@ -1,13 +1,9 @@
 #!/usr/bin/env node
 
-import { greetAndGetName, getAnswer } from '../src/cli.js';
+import { getAnswer } from '../src/cli.js';
 import {
   playGame, randomNumber, randomOperator, evaluate,
 } from '../src/index.js';
-
-const name = greetAndGetName();
-
-console.log('What is the result of the expression?');
 
 playGame(() => {
   const number1 = randomNumber(1, 30);
@@ -20,4 +16,4 @@ playGame(() => {
   const answer = getAnswer(`Question: ${expression}`);
 
   return { answer, correctAnswer };
-}, name);
+}, 'What is the result of the expression?');

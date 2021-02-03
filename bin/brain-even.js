@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 
-import { greetAndGetName, getAnswer } from '../src/cli.js';
+import { getAnswer } from '../src/cli.js';
 import { playGame, randomNumber } from '../src/index.js';
-
-const name = greetAndGetName();
-
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 playGame(() => {
   const number = randomNumber(1, 100);
@@ -15,4 +11,4 @@ playGame(() => {
   const answer = getAnswer(`Question: ${number}`);
 
   return { answer, correctAnswer };
-}, name);
+}, 'Answer "yes" if the number is even, otherwise answer "no".');

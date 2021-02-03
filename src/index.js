@@ -1,4 +1,4 @@
-import { checkAnswerAndPrint } from './cli.js';
+import { greetAndGetName, checkAnswerAndPrint } from './cli.js';
 
 const attemptsNumber = 3;
 const operators = ['+', '-', '*'];
@@ -33,7 +33,10 @@ export const findGcd = (num1, num2) => {
   return x;
 };
 
-export const playGame = (gameFn, name) => {
+export const playGame = (gameFn, gameQuestion) => {
+  const name = greetAndGetName();
+  console.log(gameQuestion);
+
   for (let i = 0; i < attemptsNumber; i += 1) {
     const { answer, correctAnswer } = gameFn();
 
