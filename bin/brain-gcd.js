@@ -7,7 +7,7 @@ playGame(() => {
   const number1 = randomNumber(1, 100);
   const number2 = randomNumber(1, 100);
 
-  const correctAnswer = `${findGcd(number1, number2)}`;
+  const correctAnswer = findGcd(number1, number2).toString();
 
   const answer = getAnswer(`Question: ${number1} ${number2}`);
 

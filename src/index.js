@@ -16,7 +16,7 @@ export const evaluate = (number1, number2, operator) => {
   }
 };
 
-export const randomNumber = (begin, end) => Math.floor((Math.random() * (end + 1)) + begin);
+export const randomNumber = (begin, end) => Math.floor((Math.random() * (end - begin + 1)) + begin);
 
 export const randomOperator = () => operators[Math.floor((Math.random() * operators.length))];
 
@@ -31,6 +31,22 @@ export const findGcd = (num1, num2) => {
   }
 
   return x;
+};
+
+export const generateProgression = () => {
+  const progressionLength = randomNumber(5, 10);
+
+  const increment = randomNumber(1, 20);
+  const begin = randomNumber(1, 100);
+
+  const progression = [begin];
+
+  for (let i = 1; i < progressionLength; i += 1) {
+    const previousNumber = progression[i - 1];
+    progression.push(previousNumber + increment);
+  }
+
+  return progression;
 };
 
 export const playGame = (gameFn, gameTask) => {

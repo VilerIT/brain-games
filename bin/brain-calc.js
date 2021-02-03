@@ -11,7 +11,7 @@ playGame(() => {
   const operator = randomOperator();
 
   const expression = `${number1} ${operator} ${number2}`;
-  const correctAnswer = `${evaluate(number1, number2, operator)}`;
+  const correctAnswer = evaluate(number1, number2, operator).toString();
 
   const answer = getAnswer(`Question: ${expression}`);
 
