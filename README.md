@@ -10,6 +10,8 @@
 
 ### [brain-progression](https://asciinema.org/a/AgnFKTOl91hVfXxPYZFVkm1rh)
 
+### [brain-prime](https://asciinema.org/a/WcxjWPk9yOLPl4AUEPX9JEabN)
+
 
 ## Hexlet tests and linter status:
 [![Actions Status](https://github.com/VilerIT/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VilerIT/frontend-project-lvl1/actions)
