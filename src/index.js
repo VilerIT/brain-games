@@ -1,4 +1,4 @@
-import { greetAndGetName, checkAnswerAndPrint } from './cli.js';
+import { greetAndGetName } from './cli.js';
 
 const attemptsNumber = 3;
 const operators = ['+', '-', '*'];
@@ -33,14 +33,17 @@ export const findGcd = (num1, num2) => {
   return x;
 };
 
-export const playGame = (gameFn, gameQuestion) => {
+export const playGame = (gameFn, gameTask) => {
   const name = greetAndGetName();
-  console.log(gameQuestion);
+  console.log(gameTask);
 
   for (let i = 0; i < attemptsNumber; i += 1) {
     const { answer, correctAnswer } = gameFn();
 
-    if (!checkAnswerAndPrint(answer, correctAnswer)) {
+    if (answer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

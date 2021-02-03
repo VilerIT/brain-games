@@ -12,13 +12,3 @@ export const getAnswer = (question) => {
   console.log(question);
   return readlineSync.question('Your answer: ');
 };
-
-export const checkAnswerAndPrint = (answer, correctAnswer) => {
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-  return false;
-};
