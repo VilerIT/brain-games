@@ -1,8 +1,6 @@
-[![Actions Status](https://github.com/VilerIT/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/VilerIT/frontend-project-lvl1/actions)
-[![ESLint Status](https://github.com/VilerIT/frontend-project-lvl1/workflows/ESLint/badge.svg)](https://github.com/VilerIT/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
 # Brain Games
+[![ESLint Status](https://github.com/VilerIT/brain-games/workflows/ESLint/badge.svg)](https://github.com/VilerIT/brain-games/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a89fd9c071363700402b/maintainability)](https://codeclimate.com/github/VilerIT/brain-games/maintainability)
 
 ## Setup
 
