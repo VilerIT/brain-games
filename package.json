@@ -1,7 +1,7 @@
 {
-  "name": "@hexlet/code",
+  "name": "brain-games",
   "version": "1.0.0",
-  "description": "\"Mind games\" project for Hexlet.",
+  "description": "A pack of Brain Games.",
   "type": "module",
   "main": "index.js",
   "scripts": {
